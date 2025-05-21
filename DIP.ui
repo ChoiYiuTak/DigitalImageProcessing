@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DigitalImageProcessing</class>
+ <widget class="QMainWindow" name="DigitalImageProcessing">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>868</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>40</y>
+      <width>341</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>原始图片</string>
+    </property>
+    <widget class="QLabel" name="original_img">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>261</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background : rgb(0, 170, 255)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>480</x>
+      <y>40</y>
+      <width>341</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Agency FB</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string>修改后图片</string>
+    </property>
+    <widget class="QLabel" name="fixed_img">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>30</y>
+       <width>261</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background : rgb(0, 170, 255)</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>320</x>
+      <y>390</y>
+      <width>191</width>
+      <height>91</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PushButton</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>868</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>数字图像的计算</string>
+    </property>
+    <addaction name="actionyu"/>
+    <addaction name="actionhuo"/>
+    <addaction name="actionfei"/>
+    <addaction name="actionjiafa"/>
+    <addaction name="actionjianfa"/>
+    <addaction name="actionchengfa"/>
+    <addaction name="actionchufa"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>数字图像的几何变换</string>
+    </property>
+    <addaction name="actionkuozhansuofang"/>
+    <addaction name="actiontuxiangpingyi"/>
+    <addaction name="actiontuxiangxuanzhuan"/>
+    <addaction name="actiontuxiangfanzhuan"/>
+    <addaction name="actionchuizhifanzhuan"/>
+    <addaction name="actionfangshebianhuan"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>数字图像直方图</string>
+    </property>
+    <addaction name="actionhuiduzhifangtu"/>
+    <addaction name="actioncaisezhifangtu"/>
+    <addaction name="actionhuizhizhifangtu"/>
+    <addaction name="actionfenduanxianxingbianhuanduizhifangtuxiugai"/>
+   </widget>
+   <widget class="QMenu" name="menu_Hough">
+    <property name="title">
+     <string>使用Hough变换实现线条变换检测</string>
+    </property>
+    <addaction name="actionHough"/>
+    <addaction name="actionHoughP"/>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>边缘检测</string>
+    </property>
+    <addaction name="actionbianyuanjiancedejibenyuanli"/>
+    <addaction name="actionRoberts"/>
+    <addaction name="actionPrewitt_Sobel"/>
+    <addaction name="actionLaplacian"/>
+    <addaction name="actionLoG"/>
+    <addaction name="actionCanny"/>
+   </widget>
+   <widget class="QMenu" name="menu_5">
+    <property name="title">
+     <string>数字图像形态学</string>
+    </property>
+    <addaction name="actionxingtaixue"/>
+    <addaction name="actionfushi"/>
+    <addaction name="actionpengzhang"/>
+    <addaction name="actionkaiyunsuan"/>
+    <addaction name="actionbiyunsuan"/>
+   </widget>
+   <widget class="QMenu" name="menu_6">
+    <property name="title">
+     <string>噪声滤除</string>
+    </property>
+    <addaction name="actionzao_sheng_miaoshuqi"/>
+    <addaction name="actionjunzhileilvboqi"/>
+    <addaction name="actionpaixutongjileilvboqi"/>
+    <addaction name="actionxuanzexinglvboqi"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_Hough"/>
+   <addaction name="menu_4"/>
+   <addaction name="menu_5"/>
+   <addaction name="menu_6"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionyu">
+   <property name="text">
+    <string>与运算</string>
+   </property>
+  </action>
+  <action name="actionhuo">
+   <property name="text">
+    <string>或运算</string>
+   </property>
+  </action>
+  <action name="actionfei">
+   <property name="text">
+    <string>非运算</string>
+   </property>
+  </action>
+  <action name="actionjiafa">
+   <property name="text">
+    <string>加法运算</string>
+   </property>
+  </action>
+  <action name="actionjianfa">
+   <property name="text">
+    <string>减法运算</string>
+   </property>
+  </action>
+  <action name="actionchengfa">
+   <property name="text">
+    <string>乘法运算</string>
+   </property>
+  </action>
+  <action name="actionchufa">
+   <property name="text">
+    <string>除法运算</string>
+   </property>
+  </action>
+  <action name="actionkuozhansuofang">
+   <property name="text">
+    <string>扩展缩放</string>
+   </property>
+  </action>
+  <action name="actiontuxiangpingyi">
+   <property name="text">
+    <string>图像平移</string>
+   </property>
+  </action>
+  <action name="actiontuxiangxuanzhuan">
+   <property name="text">
+    <string>图像旋转</string>
+   </property>
+  </action>
+  <action name="actiontuxiangfanzhuan">
+   <property name="text">
+    <string>图像水平翻转</string>
+   </property>
+  </action>
+  <action name="actionchuizhifanzhuan">
+   <property name="text">
+    <string>图像垂直翻转</string>
+   </property>
+  </action>
+  <action name="actionhuiduzhifangtu">
+   <property name="text">
+    <string>灰度直方图</string>
+   </property>
+  </action>
+  <action name="actioncaisezhifangtu">
+   <property name="text">
+    <string>彩色直方图</string>
+   </property>
+  </action>
+  <action name="actionhuizhizhifangtu">
+   <property name="text">
+    <string>绘制直方图</string>
+   </property>
+  </action>
+  <action name="actionfenduanxianxingbianhuanduizhifangtuxiugai">
+   <property name="text">
+    <string>分段线性变换对直方图修改</string>
+   </property>
+  </action>
+  <action name="actionbianyuanjiancedejibenyuanli">
+   <property name="text">
+    <string>边缘检测的基本原理与图像增强</string>
+   </property>
+  </action>
+  <action name="actionRoberts">
+   <property name="text">
+    <string>Roberts</string>
+   </property>
+  </action>
+  <action name="actionPrewitt_Sobel">
+   <property name="text">
+    <string>Prewitt &amp; Sobel</string>
+   </property>
+  </action>
+  <action name="actionLaplacian">
+   <property name="text">
+    <string>Laplacian</string>
+   </property>
+  </action>
+  <action name="actionLoG">
+   <property name="text">
+    <string>LoG</string>
+   </property>
+  </action>
+  <action name="actionCanny">
+   <property name="text">
+    <string>Canny</string>
+   </property>
+  </action>
+  <action name="actionxingtaixue">
+   <property name="text">
+    <string>图像形态学操作</string>
+   </property>
+  </action>
+  <action name="actionjiegouyuan">
+   <property name="text">
+    <string/>
+   </property>
+  </action>
+  <action name="actionjiegouyuandefenlei">
+   <property name="text">
+    <string>jiegouyuandefenlei</string>
+   </property>
+  </action>
+  <action name="actionfushi">
+   <property name="text">
+    <string>腐蚀</string>
+   </property>
+  </action>
+  <action name="actionpengzhang">
+   <property name="text">
+    <string>膨胀</string>
+   </property>
+  </action>
+  <action name="actionkaiyunsuan">
+   <property name="text">
+    <string>开运算</string>
+   </property>
+  </action>
+  <action name="actionbiyunsuan">
+   <property name="text">
+    <string>闭运算</string>
+   </property>
+  </action>
+  <action name="actionzao_sheng_miaoshuqi">
+   <property name="text">
+    <string>噪声描述器</string>
+   </property>
+  </action>
+  <action name="actionjunzhileilvboqi">
+   <property name="text">
+    <string>均值滤波器</string>
+   </property>
+  </action>
+  <action name="actionpaixutongjileilvboqi">
+   <property name="text">
+    <string>排序统计类滤波器</string>
+   </property>
+  </action>
+  <action name="actionxuanzexinglvboqi">
+   <property name="text">
+    <string>选择性滤波器</string>
+   </property>
+  </action>
+  <action name="actionfangshebianhuan">
+   <property name="text">
+    <string>仿射变换</string>
+   </property>
+  </action>
+  <action name="actionHough">
+   <property name="text">
+    <string>使用Hough变换实现线条变化检测</string>
+   </property>
+  </action>
+  <action name="actionHoughP">
+   <property name="text">
+    <string>HoughP</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
